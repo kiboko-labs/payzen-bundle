@@ -15,7 +15,7 @@ Kiboko\Bundle\SyliusPayzenBundle\KibokoSyliusPayzenBundle::class => ['all' => tr
 ```
 
  
-* Ajouter dans le fichier `composer.json` dans la partie `psr-4 :
+* Ajouter dans le fichier `composer.json` dans la partie `psr-4` :
 ```
 "Kiboko\\Bundle\\": "src/Kiboko/Bundle/",
 ```
