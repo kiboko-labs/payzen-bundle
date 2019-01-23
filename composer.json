@@ -2,7 +2,7 @@
     "name": "kiboko-labs/sylius-payzenbundle",
     "type": "symfony-bundle",
     "description": "Payzen gateway for Sylius projects.",
-    "keywords": ["Sylius", "Payum", "Paybox", "Symfony"],
+    "keywords": ["Sylius", "Payum", "Payzen", "Symfony"],
     "license": "MIT",
     "authors": [
         {
