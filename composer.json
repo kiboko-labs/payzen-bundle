@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kiboko\\SyliusPayzenBundle\\": "src/"
+            "Kiboko-labs\\SyliusPayzenBundle\\": "src/"
         }
     }
 }
