@@ -1,0 +1,27 @@
+{
+    "name": "kiboko-labs/sylius-payzenbundle",
+    "type": "symfony-bundle",
+    "description": "Payzen gateway for Sylius projects.",
+    "keywords": ["Sylius", "Payum", "Paybox", "Symfony"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name":     "Xavier Besson",
+            "email":    "xavier@kiboko.fr",
+            "homepage": "https://github.com/xabe20"
+        },
+        {
+            "name" : "Etienne Dauvergne",
+            "homepage" : "http://ekyna.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "sylius/sylius": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kiboko\\SyliusPayzenBundle\\": "src/"
+        }
+    }
+}
