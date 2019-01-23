@@ -1,8 +1,8 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle;
+namespace Kiboko\SyliusPayzenBundle;
 
-use Kiboko\Bundle\SyliusPayzenBundle\DependencyInjection\KibokoSyliusPayzenExtension;
+use Kiboko\SyliusPayzenBundle\DependencyInjection\KibokoSyliusPayzenExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class KibokoSyliusPayzenBundle extends Bundle

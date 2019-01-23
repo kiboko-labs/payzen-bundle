@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\DependencyInjection;
+namespace Kiboko\SyliusPayzenBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

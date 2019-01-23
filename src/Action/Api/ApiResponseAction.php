@@ -1,15 +1,15 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\Action\Api;
+namespace Kiboko\SyliusPayzenBundle\Action\Api;
 
-use Kiboko\Bundle\SyliusPayzenBundle\Request\Response;
+use Kiboko\SyliusPayzenBundle\Request\Response;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
 use Payum\Core\Request\GetHttpRequest;
 
 /**
  * Class ResponseAction
- * @package Kiboko\Bundle\SyliusPayzenBundle\Action\Api
+ * @package Kiboko\SyliusPayzenBundle\Action\Api
  * @author  Etienne Dauvergne <contact@ekyna.com>
  */
 class ApiResponseAction extends AbstractApiAction

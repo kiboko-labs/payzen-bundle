@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\Api;
+namespace Kiboko\SyliusPayzenBundle\Api;
 
 use Payum\Core\Exception\LogicException;
 use Payum\Core\Exception\RuntimeException;
@@ -9,7 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class Api
- * @package Kiboko\Bundle\SyliusPayzenBundle\Api
+ * @package Kiboko\SyliusPayzenBundle\Api
  * @author  Etienne Dauvergne <contact@ekyna.com>
  */
 class Api

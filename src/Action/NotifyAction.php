@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\Action;
+namespace Kiboko\SyliusPayzenBundle\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Bridge\Spl\ArrayObject;
@@ -12,7 +12,7 @@ use Payum\Core\Request\Sync;
 
 /**
  * Class NotifyAction
- * @package Kiboko\Bundle\SyliusPayzenBundle\Action
+ * @package Kiboko\SyliusPayzenBundle\Action
  * @author  Etienne Dauvergne <contact@ekyna.com>
  */
 class NotifyAction implements ActionInterface, GatewayAwareInterface

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\Form\Type;
+namespace Kiboko\SyliusPayzenBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

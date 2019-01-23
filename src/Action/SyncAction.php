@@ -1,8 +1,8 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\Action;
+namespace Kiboko\SyliusPayzenBundle\Action;
 
-use Kiboko\Bundle\SyliusPayzenBundle\Request\Response;
+use Kiboko\SyliusPayzenBundle\Request\Response;
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
@@ -12,7 +12,7 @@ use Payum\Core\Request\Sync;
 
 /**
  * Class SyncAction
- * @package Kiboko\Bundle\SyliusPayzenBundle\Action
+ * @package Kiboko\SyliusPayzenBundle\Action
  * @author  Etienne Dauvergne <contact@ekyna.com>
  */
 class SyncAction implements ActionInterface, GatewayAwareInterface

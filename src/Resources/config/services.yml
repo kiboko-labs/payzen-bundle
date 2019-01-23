@@ -1,12 +1,12 @@
 services:
     sylius.form.type.gateway_configuration.payzen:
-        class: Kiboko\Bundle\SyliusPayzenBundle\Form\Type\PayzenGatewayConfigurationType
+        class: Kiboko\SyliusPayzenBundle\Form\Type\PayzenGatewayConfigurationType
         tags:
             - { name: sylius.gateway_configuration_type, type: payzen, label: sylius.payzen_gateway_factory.payzen_checkout }
             - { name: form.type }
 
     sylius.payment.payzen.factory:
         class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
-        arguments: [Kiboko\Bundle\SyliusPayzenBundle\PayzenGatewayFactory]
+        arguments: [Kiboko\SyliusPayzenBundle\PayzenGatewayFactory]
         tags:
             - { name: payum.gateway_factory_builder, factory: payzen }

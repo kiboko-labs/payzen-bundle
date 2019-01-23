@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle;
+namespace Kiboko\SyliusPayzenBundle;
 
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\GatewayFactory;
@@ -8,7 +8,7 @@ use Payum\Core\GatewayFactoryInterface;
 
 /**
  * Class PayzenGatewayFactory
- * @package Kiboko\Bundle\SyliusPayzenBundle
+ * @package Kiboko\SyliusPayzenBundle
  * @author  Etienne Dauvergne <contact@ekyna.com>
  */
 class PayzenGatewayFactory extends GatewayFactory

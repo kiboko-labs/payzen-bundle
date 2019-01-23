@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Bundle\SyliusPayzenBundle\Action;
+namespace Kiboko\SyliusPayzenBundle\Action;
 
 use Kiboko\Component\Commerce\Bridge\Payum\Request\GetHumanStatus;
 use Payum\Core\Action\ActionInterface;
@@ -12,7 +12,7 @@ use Payum\Core\Request\Refund;
 
 /**
  * Class CaptureAction
- * @package Kiboko\Bundle\SyliusPayzenBundle\Action
+ * @package Kiboko\SyliusPayzenBundle\Action
  * @author  Etienne Dauvergne <contact@ekyna.com>
  */
 class RefundAction implements ActionInterface, GatewayAwareInterface
