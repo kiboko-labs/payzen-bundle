@@ -1,0 +1,9 @@
+sylius:
+    form:
+        gateway_configuration:
+            payzen:
+                site_id: Site ID
+                certificate: Certifcate
+                ctx_mode: CTX mode
+                directory: Directory
+                debug: Debug
