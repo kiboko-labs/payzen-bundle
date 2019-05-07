@@ -1,5 +1,5 @@
 {
-    "name": "kiboko-labs/sylius-payzenbundle",
+    "name": "kiboko/sylius-payzenbundle",
     "type": "symfony-bundle",
     "description": "Payzen gateway for Sylius projects.",
     "keywords": ["Sylius", "Payum", "Payzen", "Symfony"],
