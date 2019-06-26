@@ -9,7 +9,7 @@ Sylius PayZen bundle via Payum
 1. Install this bundle:
 
 ```bash
-$ composer require kiboko-labs/sylius-payzen-bundle
+$ composer require kiboko/sylius-payzen-bundle
 ```
 
 2. Configure new payment method in Sylius Admin
@@ -36,3 +36,29 @@ Kiboko\Bundle\SyliusPayzenBundle\KibokoSyliusPayzenBundle::class => ['all' => tr
 ```
 "Kiboko\\Bundle\\": "src/Kiboko/Bundle/",
 ```
+
+### Build archive
+
+Install `jq` package.
+
+Run `make build`
+
+In your project, you can add the plugin with 
+
+```
+    "repositories": {
+        "payzen-integration": {
+            "type": "package",
+            "package": {
+                "name": "kiboko/sylius-payzen-bundle",
+                "version": "0.1.0",
+                "dist": {
+                    "url": "{PATH_TO_YOUR_ARCHIVE}/sylius-payzenbundle-0.1.0.tar",
+                    "type": "tar"
+                }
+            }
+        }
+    }
+```
+
+And run `composer require kiboko/sylius-payzen-bundle`

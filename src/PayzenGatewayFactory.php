@@ -58,6 +58,9 @@ class PayzenGatewayFactory extends GatewayFactory
                 'ctx_mode'    => $config['ctx_mode'],
                 'directory'   => $config['directory'],
                 'debug'       => $config['debug'],
+                'n_times'     => $config['n_times'],
+                'count'       => $config['count'],
+                'period'      => $config['period'],
             ], $apiConfig);
 
             $requiredOptions[] = 'api';

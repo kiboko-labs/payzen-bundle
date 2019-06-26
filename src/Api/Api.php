@@ -243,12 +243,18 @@ class Api
                 'ctx_mode',
                 'directory',
                 'debug',
+                'n_times',
+                'count',
+                'period',
             ])
             ->setAllowedTypes('site_id', 'string')
             ->setAllowedTypes('certificate', 'string')
             ->setAllowedValues('ctx_mode', ['TEST', 'PRODUCTION'])
             ->setAllowedTypes('directory', 'string')
             ->setAllowedTypes('debug', 'bool')
+            ->setAllowedTypes('n_times', 'bool')
+            ->setAllowedTypes('count', ['null', 'int'])
+            ->setAllowedTypes('period', ['null', 'int'])
             ->setNormalizer('directory', function (Options $options, $value) {
                 return rtrim($value, DIRECTORY_SEPARATOR);
             });

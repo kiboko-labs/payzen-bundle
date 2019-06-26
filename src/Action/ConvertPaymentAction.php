@@ -8,7 +8,7 @@ use Payum\Core\Exception\RequestNotSupportedException;
 use Payum\Core\Exception\RuntimeException;
 use Payum\Core\GatewayAwareInterface;
 use Payum\Core\GatewayAwareTrait;
-use Payum\Core\Model\PaymentInterface;
+use Sylius\Component\Core\Model\PaymentInterface;
 use Payum\Core\Request\Convert;
 use Payum\Core\Request\GetCurrency;
 
@@ -32,6 +32,8 @@ class ConvertPaymentAction implements ActionInterface, GatewayAwareInterface
 
         /** @var PaymentInterface $payment */
         $payment = $request->getSource();
+        $order = $payment->getOrder();
+        $gatewayConfig = $payment->getMethod()->getGatewayConfig()->getConfig();
 
         $model = ArrayObject::ensureArrayObject($payment->getDetails());
 
@@ -43,17 +45,26 @@ class ConvertPaymentAction implements ActionInterface, GatewayAwareInterface
             $divisor = pow(10, 2 - $currency->exp);
 
             $model['vads_currency'] = (string)$currency->numeric;
-            $model['vads_amount'] = (string)abs($payment->getTotalAmount() / $divisor);
+            $model['vads_amount'] = (string)abs($order->getTotal() / $divisor);
         }
 
         if (false == $model['vads_order_id']) {
-            $model['vads_order_id'] = $payment->getNumber();
+            $model['vads_order_id'] = $order->getNumber();
         }
         if (false == $model['vads_cust_id']) {
-            $model['vads_cust_id'] = $payment->getClientId();
+            $model['vads_cust_id'] = $order->getCustomer()->getId();
         }
         if (false == $model['vads_cust_email']) {
-            $model['vads_cust_email'] = $payment->getClientEmail();
+            $model['vads_cust_email'] = $order->getCustomer()->getEmail();
+        }
+        
+        if (isset($gatewayConfig['n_times']) && $gatewayConfig['n_times']) {
+            $count = (int) $gatewayConfig['count'];
+            $period = (int) $gatewayConfig['period'];
+            if ($count > 1 && $period > 0) {
+                $first = round($model['vads_amount'] / $count);
+                $model['vads_payment_config'] = sprintf('MULTI:first=%d;count=%d;period=%d', $first, $count, $period);
+            }
         }
 
         $request->setResult((array)$model);

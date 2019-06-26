@@ -7,3 +7,8 @@ sylius:
                 ctx_mode: CTX mode
                 directory: Directory
                 debug: Debug
+                n_times: Paiement en plusieurs fois
+                count: Nombre d'échéances
+                period: Délai entre les paiements (en jours)
+                yes: Oui
+                no: Non

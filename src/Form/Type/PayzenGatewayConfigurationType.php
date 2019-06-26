@@ -37,7 +37,6 @@ final class PayzenGatewayConfigurationType extends AbstractType
             ])
             ->add('directory', TextType::class, [
                 'label'       => 'sylius.form.gateway_configuration.payzen.directory',
-                'data'        => '/var/payzen',
             ])
             ->add('debug', ChoiceType::class, [
                 'label'       => 'sylius.form.gateway_configuration.payzen.debug',
@@ -45,6 +44,19 @@ final class PayzenGatewayConfigurationType extends AbstractType
                     'Yes' => true,
                     'No' => false,
                 ),
+            ])
+            ->add('n_times', ChoiceType::class, [
+                'label'       => 'sylius.form.gateway_configuration.payzen.n_times',
+                'choices'  => array(
+                    'sylius.form.gateway_configuration.payzen.yes' => true,
+                    'sylius.form.gateway_configuration.payzen.no' => false,
+                ),
+            ])
+            ->add('count', TextType::class, [
+                'label'       => 'sylius.form.gateway_configuration.payzen.count',
+            ])
+            ->add('period', TextType::class, [
+                'label'       => 'sylius.form.gateway_configuration.payzen.period',
             ])
         ;
     }
