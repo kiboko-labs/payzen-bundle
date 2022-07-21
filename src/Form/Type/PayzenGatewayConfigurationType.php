@@ -2,6 +2,7 @@
 
 namespace Kiboko\SyliusPayzenBundle\Form\Type;
 
+use Ekyna\Component\Payum\Payzen\Api\Api;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -29,10 +30,10 @@ final class PayzenGatewayConfigurationType extends AbstractType
                 ],
             ])
             ->add('ctx_mode', ChoiceType::class, [
-                'label'       => 'sylius.form.gateway_configuration.payzen.ctx_mode',
+                'label'       => 'sylius.form.gateway_configuration.payzen.ctx_mode.label',
                 'choices'  => array(
-                    'TEST' => 'TEST',
-                    'PRODUCTION' => 'PRODUCTION',
+                    'sylius.form.gateway_configuration.payzen.ctx_mode.choices.test' => Api::MODE_TEST,
+                    'sylius.form.gateway_configuration.payzen.ctx_mode.choices.production' => Api::MODE_PRODUCTION,
                 ),
             ])
         ;

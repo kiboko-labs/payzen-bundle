@@ -4,6 +4,10 @@ sylius:
             payzen:
                 site_id: Site ID
                 certificate: Certificate
-                ctx_mode: CTX mode
+                ctx_mode:
+                    label: CTX mode
+                    choices:
+                        test: Test
+                        production: Production
     payzen_gateway_factory:
         payzen_checkout: Payzen Checkout
