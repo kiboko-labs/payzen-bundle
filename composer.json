@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "sylius/sylius": "^1.0"
+        "sylius/sylius": "^1.0",
+        "ekyna/payum-payzen": "^1.6"
     },
     "autoload": {
         "psr-4": {
