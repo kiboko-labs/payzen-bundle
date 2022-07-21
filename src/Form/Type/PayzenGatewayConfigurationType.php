@@ -19,13 +19,13 @@ final class PayzenGatewayConfigurationType extends AbstractType
             ->add('site_id', TextType::class, [
                 'label'       => 'sylius.form.gateway_configuration.payzen.site_id',
                 'constraints' => [
-                    new NotBlank(),
+                    new NotBlank(['groups' => ['sylius'],]),
                 ],
             ])
             ->add('certificate', TextType::class, [
                 'label'       => 'sylius.form.gateway_configuration.payzen.certificate',
                 'constraints' => [
-                    new NotBlank(),
+                    new NotBlank(['groups' => ['sylius'],]),
                 ],
             ])
             ->add('ctx_mode', ChoiceType::class, [
@@ -34,29 +34,6 @@ final class PayzenGatewayConfigurationType extends AbstractType
                     'TEST' => 'TEST',
                     'PRODUCTION' => 'PRODUCTION',
                 ),
-            ])
-            ->add('directory', TextType::class, [
-                'label'       => 'sylius.form.gateway_configuration.payzen.directory',
-            ])
-            ->add('debug', ChoiceType::class, [
-                'label'       => 'sylius.form.gateway_configuration.payzen.debug',
-                'choices'  => array(
-                    'Yes' => true,
-                    'No' => false,
-                ),
-            ])
-            ->add('n_times', ChoiceType::class, [
-                'label'       => 'sylius.form.gateway_configuration.payzen.n_times',
-                'choices'  => array(
-                    'sylius.form.gateway_configuration.payzen.yes' => true,
-                    'sylius.form.gateway_configuration.payzen.no' => false,
-                ),
-            ])
-            ->add('count', TextType::class, [
-                'label'       => 'sylius.form.gateway_configuration.payzen.count',
-            ])
-            ->add('period', TextType::class, [
-                'label'       => 'sylius.form.gateway_configuration.payzen.period',
             ])
         ;
     }
