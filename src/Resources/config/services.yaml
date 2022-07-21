@@ -5,8 +5,8 @@ services:
             - { name: sylius.gateway_configuration_type, type: payzen, label: sylius.payzen_gateway_factory.payzen_checkout }
             - { name: form.type }
 
-    sylius.payment.payzen.factory:
-        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
-        arguments: [Kiboko\SyliusPayzenBundle\PayzenGatewayFactory]
+    kiboko_sylius_payzen_bundle.action.convert_payment:
+        public: true
+        class: Kiboko\SyliusPayzenBundle\Action\ConvertPaymentAction
         tags:
-            - { name: payum.gateway_factory_builder, factory: payzen }
+            - { name: payum.action, factory: payzen, prepend: true }
