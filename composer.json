@@ -48,5 +48,10 @@
         "post-create-project-cmd": [
             "@php bin/create_node_symlink.php"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/thanks": true
+        }
     }
 }
