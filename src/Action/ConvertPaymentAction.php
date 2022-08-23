@@ -37,19 +37,10 @@ class ConvertPaymentAction implements ActionInterface, GatewayAwareInterface
         Assert::notNull($order);
         $customer = $order->getCustomer();
         Assert::notNull($customer);
-        /**
-         * @todo create a getConfig() method on the \Ekyna\Component\Payum\Payzen\Api\Api
-         *       to get the config from the gateway, instead of getting it from the payment method gateway config.
-         */
-        $paymentMethod = $payment->getMethod();
-        Assert::notNull($paymentMethod);
-        $gatewayConfig = $paymentMethod->getGatewayConfig();
-        Assert::notNull($gatewayConfig);
-        $config = $gatewayConfig->getConfig();
 
         $model = ArrayObject::ensureArrayObject($payment->getDetails());
 
-        if (false === $model['vads_amount']) {
+        if (false === ($model['vads_amount'] ?? false)) {
             $this->gateway->execute($currency = new GetCurrency($payment->getCurrencyCode()));
             if (2 < $currency->exp) {
                 throw new RuntimeException('Unexpected currency exp.');
