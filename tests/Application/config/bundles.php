@@ -54,5 +54,6 @@ return [
     Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class => ['all' => true],
     Sylius\Bundle\ApiBundle\SyliusApiBundle::class => ['all' => true],
     SyliusLabs\DoctrineMigrationsExtraBundle\SyliusLabsDoctrineMigrationsExtraBundle::class => ['all' => true],
+    Ekyna\Bundle\PayumPayzenBundle\EkynaPayumPayzenBundle::class => ['all' => true],
     Kiboko\SyliusPayzenBundle\KibokoSyliusPayzenBundle::class => ['all' => true],
 ];
