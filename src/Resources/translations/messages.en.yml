@@ -3,12 +3,11 @@ sylius:
         gateway_configuration:
             payzen:
                 site_id: Site ID
-                certificate: Certifcate
-                ctx_mode: CTX mode
-                directory: Directory
-                debug: Debug
-                n_times: N times payment
-                count: Number of payments
-                period: Delay between payments (in days)
-                yes: Yes
-                no: No
+                certificate: Certificate
+                ctx_mode:
+                    label: CTX mode
+                    choices:
+                        test: Test
+                        production: Production
+    payzen_gateway_factory:
+        payzen_checkout: Payzen Checkout
