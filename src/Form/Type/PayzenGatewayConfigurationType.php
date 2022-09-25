@@ -36,6 +36,15 @@ final class PayzenGatewayConfigurationType extends AbstractType
                     'sylius.form.gateway_configuration.payzen.ctx_mode.choices.production' => Api::MODE_PRODUCTION,
                 ),
             ])
+            ->add('endpoint', ChoiceType::class, [
+                'label'       => 'sylius.form.gateway_configuration.payzen.endpoint.label',
+                'choices'  => array(
+                    'sylius.form.gateway_configuration.payzen.endpoint.choices.default' => null,
+                    'sylius.form.gateway_configuration.payzen.endpoint.choices.clic_and_pay' => Api::ENDPOINT_CLICANDPAY,
+                    'sylius.form.gateway_configuration.payzen.endpoint.choices.scellius' => Api::ENDPOINT_SCELLIUS,
+                    'sylius.form.gateway_configuration.payzen.endpoint.choices.systempay' => Api::ENDPOINT_SYSTEMPAY,
+                ),
+            ])
         ;
     }
 }
