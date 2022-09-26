@@ -12,9 +12,10 @@ sylius:
                 endpoint:
                     label: Endpoint
                     choices:
-                        default: Default
+                        default: PayZen (default)
                         clic_and_pay: Click And Pay
                         scellius: Scellius
                         systempay: SystemPay
+                        osb: OSB
     payzen_gateway_factory:
         payzen_checkout: Payzen Checkout
