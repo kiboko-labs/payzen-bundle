@@ -9,5 +9,12 @@ sylius:
                     choices:
                         test: Test
                         production: Production
+                endpoint:
+                    label: Endpoint
+                    choices:
+                        default: Default
+                        clic_and_pay: Click And Pay
+                        scellius: Scellius
+                        systempay: SystemPay
     payzen_gateway_factory:
         payzen_checkout: Payzen Checkout
