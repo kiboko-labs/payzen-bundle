@@ -17,6 +17,7 @@
     ],
     "require": {
         "sylius/sylius": "^1.0",
+        "ekyna/payum-payzen": "^1.6.6",
         "ekyna/payum-payzen-bundle": "^1.6"
     },
     "require-dev": {
