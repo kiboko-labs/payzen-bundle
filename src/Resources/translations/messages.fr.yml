@@ -17,6 +17,6 @@ sylius:
                         scellius: Scellius
                         systempay: SystemPay
                         osb: OSB
-                        soge_commerce: SogeCommerce
+                        sogecommerce: SogeCommerce
     payzen_gateway_factory:
         payzen_checkout: Payzen Checkout
