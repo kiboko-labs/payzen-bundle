@@ -10,6 +10,7 @@ Sylius PayZen bundle via Payum
 - CLIC&PAY
 - OSB
 - SogeCommerce
+
 If the payment gateway you are using is not in this list, please open an [issue](https://github.com/kiboko-labs/payzen-bundle/issues) or a [pull request](https://github.com/kiboko-labs/payzen-bundle/pulls)
 
 ### Usage & install
