@@ -3,6 +3,14 @@ Sylius Payzen Bundle
 
 Sylius PayZen bundle via Payum
 
+### Compatibility
+
+- Systempay
+- Scellius
+- CLIC&PAY
+- OSB
+- SogeCommerce
+
 
 ### Usage & install
 
