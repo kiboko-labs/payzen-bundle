@@ -44,6 +44,7 @@ final class PayzenGatewayConfigurationType extends AbstractType
                     'sylius.form.gateway_configuration.payzen.endpoint.choices.scellius' => Api::ENDPOINT_SCELLIUS,
                     'sylius.form.gateway_configuration.payzen.endpoint.choices.systempay' => Api::ENDPOINT_SYSTEMPAY,
                     'sylius.form.gateway_configuration.payzen.endpoint.choices.osb' => Api::ENDPOINT_OSB,
+                    'sylius.form.gateway_configuration.payzen.endpoint.choices.sogecommerce' => Api::ENDPOINT_SOGECOMMERCE,
                 ),
             ])
         ;
